@@ -1,0 +1,10 @@
+How to instal react
+
+1. used this source for the installation: 
+https://www.liquidweb.com/kb/install-react-js-windows/?irgwc=1&clickid=Q7sSmxT3uxyIWnjxFVwuKUtzUkGV2W23tXuBxg0&iradid=278394&irpid=269814&sharedid=b44b1e2255f5f1a8be83301154c4e1ad&_ir=1&utm_medium=affiliate
+
+2. install the latest nodejs 
+3. use this command to install reack packages: 
+npm install -g create-react-app
+4. then create project by :
+create-react-app reactproject2
