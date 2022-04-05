@@ -6,10 +6,15 @@ const Home = () => {
 
 	// Defined variable for useStare here 
 	// 1. blog section - this data is passed to BlogList.js via Bloglist tag in section 2
-	const [blogs, setBlog] = useState([
+	const [blogs, setBlogs] = useState([
 			{title:'1. Afghanistan', desc:'Afghanistan is a good country', id:1},
 			{title:'2. Tajikistan', desc:'Afghanistan is a good country too', id:2},
 		]);
+
+		const handelerDelete= (id) => {
+			const newBlogs = blogs.filter(blog => blog.id !== id);
+			setBlogs(newBlogs);
+		}
 
 
 	return (
@@ -17,9 +22,8 @@ const Home = () => {
 			<div className="home">
 
 				// This is commin from BlogList.js to pass data from section 1 to BlogList.js
-				<BlogList blogs = {blogs}/>
-				<hr/>
-				<BlogList blogs = {blogs.filter((blog)=>blog.id===2)}/>
+				<BlogList blogs = {blogs}  handelerDelete={handelerDelete} />
+			
 
 			</div>
 		);

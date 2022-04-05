@@ -1,5 +1,5 @@
-const BlogList = (props) =>{
-	const blogs = props.blogs;
+const BlogList = ({blogs, handelerDelete}) =>{
+
 
 	return(
 
@@ -10,6 +10,9 @@ const BlogList = (props) =>{
 					<div key={blog.id}>
 					<h2>{blog.title}</h2>
 					<h2>{blog.desc}</h2>
+
+					<button onClick={ ()=> handelerDelete(blog.id)}>  Delete </button>
+
 					</div>
 
 					))}
