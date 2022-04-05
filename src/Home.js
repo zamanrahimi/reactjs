@@ -2,31 +2,27 @@
 import { useState } from 'react'; 
 const Home = () => {
 
-	const handclick = () =>{
-		console.log("Hello, zaman");
-	}
 
 	// Defined variable for useStare here 
-	const [name, setName] = useState('Ahmad');
-	const [age, setAge] = useState(30);
-	const handleClickAgain= (name) =>{
-		// setName for useState here 
-		setName('Karim');
-		setAge(40);
+	const [blogs, setBlog] = useState([
+			{title:'Afghanistan', desc:'Afghanistan is a good country', id:1},
+			{title:'Tajikistan', desc:'Afghanistan is a good country toot', id:2},
+		]);
 
-	}
 
 	return (
 
 			<div className="home">
 
 				<h3>Home component</h3>
+				{ blogs.map( (blog) => (
 
-				{name} is { age } years aold
-			
-				<button onClick={()=>{
-					handleClickAgain('Maria');
-				}}>Click me again</button>
+					<div key={blog.id}>
+					<h2>{blog.title}</h2>
+					<h2>{blog.desc}</h2>
+					</div>
+
+					))}
 
 			</div>
 		);
