@@ -1,12 +1,14 @@
 // import useSate here 
 import { useState } from 'react'; 
+import BlogList from './BlogList';
 const Home = () => {
 
 
 	// Defined variable for useStare here 
+	// 1. blog section - this data is passed to BlogList.js via Bloglist tag in section 2
 	const [blogs, setBlog] = useState([
 			{title:'Afghanistan', desc:'Afghanistan is a good country', id:1},
-			{title:'Tajikistan', desc:'Afghanistan is a good country toot', id:2},
+			{title:'Tajikistan', desc:'Afghanistan is a good country too', id:2},
 		]);
 
 
@@ -14,15 +16,8 @@ const Home = () => {
 
 			<div className="home">
 
-				<h3>Home component</h3>
-				{ blogs.map( (blog) => (
-
-					<div key={blog.id}>
-					<h2>{blog.title}</h2>
-					<h2>{blog.desc}</h2>
-					</div>
-
-					))}
+				// This is commin from BlogList.js to pass data from section 1 to BlogList.js
+				<BlogList blogs = {blogs}/>
 
 			</div>
 		);
