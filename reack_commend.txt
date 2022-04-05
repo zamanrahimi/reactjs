@@ -8,3 +8,6 @@ https://www.liquidweb.com/kb/install-react-js-windows/?irgwc=1&clickid=Q7sSmxT3u
 npm install -g create-react-app
 4. then create project by :
 create-react-app reactproject2
+
+5. check node version 
+node -v 
